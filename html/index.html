@@ -7,8 +7,93 @@
     <title>Miku x Teto - главная</title>
 </head>
 <body>
-    
+    <header>
+        <a href="index.html"><img id="click" src="/img/logomt.jpg" class="zagol"></a>
+    </header>
+
+    <div class="navig">
+        <div class="link-group" data-gif-duration="2000">
+            <div class="icon-container">
+                <img src="/img/bring-to-front.png" class="static-icon" alt="глав">
+                <img src="/img/bring-to-front.gif" class="gif-icon" alt="Анимация">
+            </div>
+            <a href="index.html" class="text-link">Главная</a>
+        </div>
+    </div>
+       
+        <div class="navig">
+        <div class="link-group" data-gif-duration="2000">
+            <div class="icon-container">
+                <img src="/img/music-note.png" class="static-icon" alt="Нота">
+                <img src="/img/music-note.gif" class="gif-icon" alt="Анимация">
+            </div>
+            <a href="#" class="text-link">Треки</a>
+        </div>
+    </div>
+
+        <div class="navig">
+        <div class="link-group" data-gif-duration="2000">
+            <div class="icon-container">
+                <img src="/img/quote.png" class="static-icon" alt="био">
+                <img src="/img/quote.gif" class="gif-icon" alt="Анимация">
+            </div>
+            <a href="glav.html" class="text-link">Биография</a>
+        </div>
+    </div>
+
+    <div class="navig navig-sozd">
+        <div class="link-group" data-gif-duration="2000">
+            <div class="icon-container">
+                <img src="/img/artist.png" class="static-icon" alt="sozd">
+                <img src="/img/artist.gif" class="gif-icon" alt="Анимация">
+            </div>
+            <a href="#" class="text-link">Разработчики</a>
+        </div>
+        </div>
+
+        <div class="profil">
+                <button class="but-prof" id="regjs">
+                    <img class="reg" src="/img/add-user (1).png">Регистрация</button>
+        </div>
+        <div class="bord"></div>
 
     
+    <div class="scroll-box">
+    <div class="content">
+    
+    </div>
+    </div>
+    
+<div id="myModal" class="modal">
+    <div id="modal-content">
+                    
+        <span class="close"></span>
+            <h2 class="registr" id="zag_reg">Введите данные</h2>
+
+<form id="form" method="post">
+
+        <div class="dann">
+            <label for="mail">Email адрес: </label><br>
+            <input type="text" name="mail" placeholder="Ваш email" id="mail"><br><br>
+            
+            
+            <label for="password">Пароль:</label><br>
+            <input type="password" name="pass" placeholder="Ваш пароль" id="pass"><br><br>
+
+            <label for="repass">Подтвердите пароль:</label><br>
+            <input type="repassword" name="repass" placeholder="Подтверждение" id="repass"><br><br>
+            
+            <div id="err"></div>
+                <div class="submit">
+            <input type="submit" name="submit" value="     Войти     ">
+                </div>
+                
+        </div>
+</form>
+    </div>
+</div>
+
+        
+    <script src="/js/index.js"></script>
 </body>
 </html>
