@@ -80,9 +80,8 @@ function check(ev) {
         errElement.innerHTML = error;
         console.clear()
     }
-    
-    // Если ошибок нет
-    alert("Все данные введены корректно!");
+    else{
+    alert("Все данные введены корректно!");}
     
     // Тут можно отправить данные на сервер
     // form.submit();
@@ -101,3 +100,11 @@ function check(ev) {
 function isValidEmail(email) {
     return email.includes('@') && email.includes('.') && email.length > 5;
 }
+
+// knopka
+let sidebar = document.getElementById('sidebarToggle');
+
+
+sidebar.addEventListener('click', function(){
+    console.log("lelele")
+})

@@ -2,21 +2,64 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {background-color: rgb(26, 26, 26);
 overflow-y: hidden;}
 
-.zagol {height: 154px;
-    border: rgb(52, 52, 52) 3px solid; 
-    border-radius: 35px;
-    margin: 17px; transition: all 0.4s;
+
+header a {
+    height: 0px; width: 0px;
+    display: inline-block;
+}
+
+.zagol {height: 154px; width: auto;
+    border: rgb(52, 52, 52) 2px solid; 
+    border-radius: 35px; margin-top: 16px; margin-left: 13px;
+    transition: all 0.4s;
     top:0%; -webkit-user-drag: none;
     }
 .zagol:hover{border-color: rgb(59, 59, 59); 
-    box-shadow: 2px 2px 4px rgb(56, 56, 56), 
+    box-shadow: 2px 2px 5px rgb(56, 56, 56), 
     -2px -2px 4px rgb(56, 56, 56); 
     scale: 1.05;}
+
+ /*SIDEBAR ПОЛЕ*/ 
+.sidebar{
+    width: 278px; height: 800px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar:hover #sidebarToggle{
+    opacity: 1;
+}
+
+.strelka{
+    color: #e6e3e38c;
+    display: inline-block;
+    font-size: 21px;
+    transition: transform 0.3s ease;
+}
+
+/* SIDEBAR BUTTON */
+#sidebarToggle{
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+    opacity: 0;
+    position: fixed;
+    left: 258px; top: 77px;
+    background-color: rgb(34, 34, 34);
+    width: 19px; height: 40px;
+    border: 1px solid rgb(51, 51, 51); border-radius: 30px;
+}
+#sidebarToggle:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+
+
+
 
 /* навиг */
 .navig {
