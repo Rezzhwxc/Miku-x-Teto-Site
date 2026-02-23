@@ -110,6 +110,20 @@ let linkimg = document.querySelectorAll('.icon-container')
 let zagol = document.querySelector('.zagol')
 let zagcollaps = document.getElementById('zag-collaps')
 
+// ===== ЗАГРУЗКА СОСТОЯНИЯ =====
+const savedState = localStorage.getItem('sidebarCollapsed');
+if (savedState === 'true') {
+    contentbox.classList.add('collapsed');
+    toggleButton.classList.add('collapsed');
+    strelka.classList.add('collapsed');
+    zagol.classList.add('collapsed');
+    zagcollaps.classList.add('collapsed');
+    linkimg.forEach(el => el.classList.add('collapsed'));
+    txt.forEach(el => el.classList.add('collapsed'));
+    toggleButton.setAttribute('aria-label', 'Развернуть сайдбар');
+}
+
+// ===== КЛИК =====
 toggleButton.addEventListener('click', () => {
     contentbox.classList.toggle('collapsed');
     toggleButton.classList.toggle('collapsed');
@@ -117,16 +131,12 @@ toggleButton.addEventListener('click', () => {
     zagol.classList.toggle('collapsed');
     zagcollaps.classList.toggle('collapsed');
 
-    linkimg.forEach(el => {
-        el.classList.toggle('collapsed')
-    })
-    txt.forEach(el => {
-        el.classList.toggle('collapsed')
-    })
+    linkimg.forEach(el => el.classList.toggle('collapsed'));
+    txt.forEach(el => el.classList.toggle('collapsed'));
 
-     if (contentbox.classList.contains('collapsed')) {
-        toggleButton.setAttribute('aria-label', 'Развернуть сайдбар');
-    } else {
-        toggleButton.setAttribute('aria-label', 'Свернуть сайдбар');
-    }
+    const isCollapsed = contentbox.classList.contains('collapsed');
+    toggleButton.setAttribute('aria-label', isCollapsed ? 'Развернуть сайдбар' : 'Свернуть сайдбар');
+    
+    // ===== СОХРАНЕНИЕ =====
+    localStorage.setItem('sidebarCollapsed', isCollapsed);
 });

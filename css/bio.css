@@ -4,6 +4,7 @@
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {background-color: rgb(26, 26, 26);
@@ -205,6 +206,12 @@ overflow-y: hidden;}
 
 img{user-select: none; -webkit-user-drag: none;}
 
+.text-link.collapsed{
+    transform: translateX(-100px);
+    scale: 0;
+    opacity: 0;
+    z-index: -100;
+}
 
 .scroll-box {
             border: 1px solid rgb(37, 37, 37);
@@ -213,7 +220,6 @@ img{user-select: none; -webkit-user-drag: none;}
                 inset 0 0 0 1px rgb(39, 39, 39);
             padding: 15px;
             margin: 20px;
-            overflow-y: scroll;
             scrollbar-width: none;
             -ms-overflow-style: none;
             background-color: rgb(31, 30, 30);
@@ -224,12 +230,6 @@ img{user-select: none; -webkit-user-drag: none;}
 
 .scroll-box.collapsed {
     left: 130px;
-}
-.text-link.collapsed{
-    transform: translateX(-100px);
-    scale: 0;
-    opacity: 0;
-    z-index: -100;
 }
 /*основные параметр модуля  */
 
@@ -340,3 +340,58 @@ input[type="repassword"]{text-align: center; font-size: 15px;
 
 #err{user-select: none;
     color: rgba(150, 1, 1, 0.842); font-size: 23px; text-align: center; font-weight: 600;}
+
+/* Взятое из индекса кончилось */
+
+/* декор */
+.star2{background: none; color: rgb(52, 52, 52); user-select: none;
+position: absolute; right: 7%; font-size: 150px; top: 4%;}
+.star3{background: none; color: rgb(52, 52, 52); user-select: none;
+position: absolute; right: 12%; font-size: 150px; top: 23%;}
+.star4{background: none; color: rgb(52, 52, 52); user-select: none;
+position: absolute; right: 5%; font-size: 150px; top: 39%;}
+.star5{background: none; color: rgb(52, 52, 52); user-select: none;
+position: absolute; right: 10%; font-size: 150px; top: 57%;}
+.star6{background: none; color: rgb(52, 52, 52); user-select: none;
+position: absolute; right: 3%; font-size: 150px; top: 75%;}
+
+
+img{
+    -webkit-user-drag: none; user-select: none;
+}
+#miku{
+    padding: 20px;
+    position: absolute; left: 2%; top: 1.5%;
+}
+#miku img{
+    height: auto;
+    flex-shrink: 0;
+    height: 340px; border: 4px solid rgb(22, 185, 185); border-radius: 30px; 
+    transition: all 0.3s ease;
+}
+#miku img:hover{scale: 1.03; 
+    box-shadow: 2px 2px 6px rgb(4, 243, 223), 
+    -2px -2px 6px rgb(4, 243, 223);}
+
+
+.podrobnee{user-select: none;
+    position: absolute; top: 49.5%; transform: translateY(-50%); left: 4%;
+    color: rgba(129, 129, 129, 0.281); 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#teto{
+    padding: 20px;
+    position: absolute; left: 2%; bottom: 1.5%;
+}
+#teto img{
+    height: auto;
+    flex-shrink: 0;
+    height: 339px; border: 4px solid rgba(202, 25, 25, 0.685); border-radius: 30px;
+    transition: all 0.3s ease;
+}
+#teto img:hover{scale: 1.03; 
+    box-shadow: 2px 2px 6px rgba(235, 17, 17, 0.76), 
+    -2px -2px 6px rgba(235, 17, 17, 0.753);}
+
