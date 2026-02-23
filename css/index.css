@@ -17,13 +17,35 @@ header a {
 .zagol {height: 154px; width: auto;
     border: rgb(52, 52, 52) 2px solid; 
     border-radius: 35px; margin-top: 16px; margin-left: 13px;
-    transition: all 0.4s;
+    transition: all 0.3s;
     top:0%; -webkit-user-drag: none;
     }
 .zagol:hover{border-color: rgb(59, 59, 59); 
     box-shadow: 2px 2px 5px rgb(56, 56, 56), 
     -2px -2px 4px rgb(56, 56, 56); 
-    scale: 1.05;}
+    scale: 1.03;}
+.zagol.collapsed{
+    opacity: 0;
+    z-index: -100;
+    transform: translateX(-100px);
+}
+
+#zag-collaps{
+    transition: all 0.3s ease; opacity: 0; z-index: -100;
+    position: absolute; left: -100px;
+    margin-top: 16px; margin-left: 6px;
+    height: 155px;
+    border: rgb(52, 52, 52) 2px solid; 
+    border-radius: 35px;
+}
+#zag-collaps:hover{border-color: rgb(59, 59, 59); 
+    box-shadow: 2px 2px 5px rgb(56, 56, 56), 
+    -2px -2px 4px rgb(56, 56, 56);}
+#zag-collaps.collapsed{
+    transform: translateX(100px);
+    opacity: 1;
+    z-index: 10;
+}
 
  /*SIDEBAR ПОЛЕ*/ 
 .sidebar{
@@ -35,20 +57,25 @@ header a {
     opacity: 1;
 }
 
-.strelka{
+.strelka::before{
+    content: '<';
     color: #e6e3e38c;
     display: inline-block;
     font-size: 21px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+}
+.strelka.collapsed::before {
+    content: '>';
 }
 
 /* SIDEBAR BUTTON */
 #sidebarToggle{
+    cursor: pointer;
     text-align: center;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.27s ease;
     opacity: 0;
     position: fixed;
-    left: 258px; top: 77px;
+    left: 256px; top: 77px;
     background-color: rgb(34, 34, 34);
     width: 19px; height: 40px;
     border: 1px solid rgb(51, 51, 51); border-radius: 30px;
@@ -57,8 +84,11 @@ header a {
     background-color: rgb(43, 43, 43);
 }
 
-
-
+#sidebarToggle.collapsed{
+    z-index: 100;
+    left: 122px;
+    scale: 0.95;
+}
 
 
 /* навиг */
@@ -77,6 +107,7 @@ header a {
             transition: color 0.3s ease;
             display: inline;
             padding: 8px 0;
+            transition: all 0.2s ease;
         }
 
         .text-link:hover {
@@ -92,10 +123,16 @@ header a {
 
         /* Иконка - не часть ссылки */
         .icon-container {
+            transition: all 0.2s ease;
             position: relative;
             width: 30px;
             height: 30px;
             flex-shrink: 0;
+            margin: 15px;
+        }
+        .icon-container.collapsed{
+            scale: 1.4;
+            margin-left: 40px;
         }
 
         .icon-container img {
@@ -113,6 +150,7 @@ header a {
         }
 
         .gif-icon {
+            transition: all 0.2s ease;
             position: absolute;
             top: 0;
             left: 0;
@@ -150,6 +188,7 @@ header a {
     scale: 1.05;
 }
 
+
 .reg{width: 30px; margin-right: 10px; margin-top: 1px;}
 
 .profil{color: #e6e3e3a4; position: absolute; bottom: 0px; left: 10px; background: none;
@@ -157,8 +196,8 @@ header a {
             padding: 10px;}
 
 .but-prof{color: #e6e3e3a4; font-size: 23px; background: none;
-            margin: 2px 0; transition: 0.3s ease;
-            padding: 16px; border: 2px solid rgb(37, 37, 37); 
+            margin: 13px 13px; transition: 0.3s ease;
+            padding: 16px; border: 1px solid rgb(37, 37, 37); 
             border-top-left-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 2px; border-top-right-radius: 2px;
             box-shadow: 0 0 0 1px #2e2e2e,    /* Вторая граница */
                 inset 0 0 0 1px rgb(39, 39, 39); /* Внутренняя граница */
@@ -167,13 +206,13 @@ header a {
 .but-prof:hover{color: #fffdfd; background-color: rgba(0, 0, 0, 0.096);
             box-shadow: 0 0 0 2px #4e4e4e,    /* Вторая граница */
                 inset 0 0 0 2px rgb(39, 39, 39); /* Внутренняя граница */
-                scale: 1.04;}
+                scale: 1.05;}
 
 img{user-select: none; -webkit-user-drag: none;}
 
 
  .scroll-box {
-            border: 2px solid rgb(37, 37, 37);
+            border: 1px solid rgb(37, 37, 37);
             box-shadow: 
                 0 0 0 1px #2e2e2e, 
                 inset 0 0 0 1px rgb(39, 39, 39);
@@ -185,8 +224,18 @@ img{user-select: none; -webkit-user-drag: none;}
             background-color: rgb(31, 30, 30);
             border-radius: 22px;
             position: absolute; top: -3px; left: 260px; right: 20px; bottom: 140px;
+            transition: all 0.3s ease;
         }
 
+.scroll-box.collapsed {
+    left: 130px;
+}
+.text-link.collapsed{
+    transform: translateX(-100px);
+    scale: 0;
+    opacity: 0;
+    z-index: -100;
+}
 /*основные параметр модуля  */
 
 .modal {
