@@ -18,7 +18,8 @@ overflow-y: hidden;}
 .zagol:hover{border-color: rgb(59, 59, 59); 
     box-shadow: 2px 2px 5px rgb(56, 56, 56), 
     -2px -2px 4px rgb(56, 56, 56); 
-    scale: 1.03;}
+    margin-top: 12px; margin-left: 8px;
+    height: 160px;}
 .zagol.collapsed{
     opacity: 0;
     z-index: -100;
