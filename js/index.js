@@ -104,15 +104,25 @@ function isValidEmail(email) {
 // knopka
 let toggleButton = document.getElementById('sidebarToggle');
 let contentbox = document.querySelector('.scroll-box');
-let strelka = document.querySelector('.strelka')
-let txt = document.querySelectorAll('.text-link')
-let linkimg = document.querySelectorAll('.icon-container')
-let zagol = document.querySelector('.zagol')
-let zagcollaps = document.getElementById('zag-collaps')
+let strelka = document.querySelector('.strelka');
+let txt = document.querySelectorAll('.text-link');
+let linkimg = document.querySelectorAll('.icon-container');
+let zagol = document.querySelector('.zagol');
+let zagcollaps = document.getElementById('zag-collaps');
+
+let mikubio = document.getElementById('miku');
+let tetobio = document.getElementById('teto');
+let mikubio2 = document.querySelector('.bio');
+let tetobio2 = document.querySelector('.bio1');
 
 // ===== ЗАГРУЗКА СОСТОЯНИЯ =====
 const savedState = localStorage.getItem('sidebarCollapsed');
 if (savedState === 'true') {
+    mikubio.classList.add('collapsed');
+    tetobio.classList.add('collapsed');
+    mikubio2.classList.add('collapsed');
+    tetobio2.classList.add('collapsed');
+
     contentbox.classList.add('collapsed');
     toggleButton.classList.add('collapsed');
     strelka.classList.add('collapsed');
@@ -125,6 +135,11 @@ if (savedState === 'true') {
 
 // ===== КЛИК =====
 toggleButton.addEventListener('click', () => {
+    mikubio.classList.toggle('collapsed');
+    tetobio.classList.toggle('collapsed');
+    mikubio2.classList.toggle('collapsed');
+    tetobio2.classList.toggle('collapsed');
+
     contentbox.classList.toggle('collapsed');
     toggleButton.classList.toggle('collapsed');
     strelka.classList.toggle('collapsed');

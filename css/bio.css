@@ -360,8 +360,13 @@ img{
     -webkit-user-drag: none; user-select: none;
 }
 #miku{
-    padding: 20px;
+    transition: all 0.3s ease;
+    width: 1230px;
+    padding: 15px;
     position: absolute; left: 2%; top: 1.5%;
+}
+#miku.collapsed{
+    width: 1350px;
 }
 #miku img{
     height: auto;
@@ -369,21 +374,42 @@ img{
     height: 340px; border: 4px solid rgb(22, 185, 185); border-radius: 30px; 
     transition: all 0.3s ease;
 }
-#miku img:hover{scale: 1.03; 
-    box-shadow: 2px 2px 6px rgb(4, 243, 223), 
-    -2px -2px 6px rgb(4, 243, 223);}
+#miku img:hover{scale: 1.03;
+    box-shadow: 2px 2px 6px rgb(0, 255, 234), 
+    -2px -2px 6px rgb(0, 255, 234);}
+
+.name{font-size: 35px;
+position: absolute; left: 41%; top: 5.5%; transition: all 0.3s;
+color: rgb(22, 185, 185);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.name:hover{scale: 1.09; color: rgb(24, 224, 208);}
+
+.bio, .bio1{color: rgba(255, 255, 255, 0.699); width: 730px; text-align: justify;
+ font-size: 18px; line-height: 1.4; text-indent: 1.5em; 
+position: absolute; left: 39.6%; top: 66px;
+transition: all 0.3s ease;}
+
+.bio.collapsed, .bio1.collapsed{
+    left: 36.5%;
+    width: 805px;
+}
 
 
 .podrobnee{user-select: none;
-    position: absolute; top: 49.5%; transform: translateY(-50%); left: 4%;
+    position: absolute; top: 49.7%; transform: translateY(-50%); left: 4%;
     color: rgba(129, 129, 129, 0.281); 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 #teto{
-    padding: 20px;
+    transition: all 0.3s ease;
+    width: 1230px;
+    padding: 15px;
     position: absolute; left: 2%; bottom: 1.5%;
+}
+#teto.collapsed{
+    width: 1350px;
 }
 #teto img{
     height: auto;
@@ -395,3 +421,9 @@ img{
     box-shadow: 2px 2px 6px rgba(235, 17, 17, 0.76), 
     -2px -2px 6px rgba(235, 17, 17, 0.753);}
 
+
+.name1{font-size: 35px;
+position: absolute; left: 41%; top: 5.5%; transition: all 0.3s;
+color: rgba(221, 34, 34, 0.685);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.name1:hover{scale: 1.09; color: rgba(248, 18, 18, 0.76);}
