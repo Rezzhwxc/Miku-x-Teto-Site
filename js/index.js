@@ -141,3 +141,4 @@ toggleButton.addEventListener('click', () => {
     // ===== СОХРАНЕНИЕ =====
     localStorage.setItem('sidebarCollapsed', isCollapsed);
 });
+
