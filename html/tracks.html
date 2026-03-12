@@ -8,5 +8,121 @@
 </head>
 <body>
     
+<aside class="sidebar" id="sidebarPanel"> 
+
+<button id="sidebarToggle" type="button" aria-label="Свернуть сайдбар"><span class="strelka"></span></button>
+
+    <img id="click" src="/img/logomt.jpg" class="zagol">
+
+    <img id="zag-collaps" src="/img/zag-collaps.png">
+
+    <div class="navig">
+        <div class="link-group" data-gif-duration="2000">
+            <div class="icon-container">
+                <img src="/img/bring-to-front.png" class="static-icon" alt="глав">
+                <a href="index.html"><img src="/img/bring-to-front.gif" class="gif-icon"  title="Главная" alt="Анимация"></a>
+            </div>
+            <a href="index.html" class="text-link">Главная</a>
+        </div>
+    </div>
+       
+        <div class="navig">
+        <div class="link-group" data-gif-duration="2000">
+            <div class="icon-container">
+                <img src="/img/music-note.png" class="static-icon" alt="Нота">
+                <a href="tracks.html"><img src="/img/music-note.gif" class="gif-icon" title="Треки" alt="Анимация"></a>
+            </div>
+            <a href="tracks.html" class="text-link">Треки</a>
+        </div>
+    </div>
+
+        <div class="navig">
+        <div class="link-group" data-gif-duration="2000">
+            <div class="icon-container">
+                <img src="/img/quote.png" class="static-icon" alt="био">
+                <a href="bio.html"><img src="/img/quote.gif" class="gif-icon" title="Биография" alt="Анимация"></a>
+            </div>
+            <a href="bio.html" class="text-link">Биография</a>
+        </div>
+    </div>
+
+    <div class="navig navig-sozd">
+        <div class="link-group" data-gif-duration="2000">
+            <div class="icon-container">
+                <img src="/img/artist.png" class="static-icon"  alt="sozd">
+                <a href="#"><img src="/img/artist.gif" class="gif-icon" title="Разработчики" alt="Анимация"></a>
+            </div>
+            <a href="#" class="text-link">Разработчики</a>
+        </div>
+        </div>
+
+        
+</aside>
+
+    <div class="profil">
+                <button class="but-prof" id="regjs">
+                    <img class="reg" src="/img/add-user (1).png">Регистрация</button>
+        </div>
+    
+<div class="scroll-box">
+    <div class="content">
+    
+        <div id="block">
+            <div class="circul">
+                <p class="txt">The World is Mine</p>
+                <button class="startstop"><img src="/img/Polygon 3 (1).png" alt="Start" class="icon"></button>
+            </div>
+
+            <div class="circul">
+                <p class="txt">Rollin' Girl</p>
+                <button class="startstop"><img src="/img/Polygon 3 (1).png" alt="Start" class="icon"></button>
+            </div>
+
+            <div class="circul">
+                <p class="txt">Black Rock Shooter</p>
+                <button class="startstop"><img src="/img/Polygon 3 (1).png" alt="Start" class="icon"></button>
+            </div>
+        </div>
+
+        <h1>More songs, more vocaloids, other voices</h1>
+        <div id="song-container">
+            
+        </div>
+
+    </div>
+</div>
+    
+<div id="myModal" class="modal">
+    <div id="modal-content">
+                    
+        <span class="close"></span>
+            <h2 class="registr" id="zag_reg">Введите данные</h2>
+
+<form id="form" method="post">
+
+        <div class="dann">
+            <label for="mail">Email адрес: </label><br>
+            <input type="text" name="mail" placeholder="Ваш email" id="mail"><br><br>
+            
+            
+            <label for="password">Пароль:</label><br>
+            <input type="password" name="pass" placeholder="Ваш пароль" id="pass"><br><br>
+
+            <label for="repass">Подтвердите пароль:</label><br>
+            <input type="repassword" name="repass" placeholder="Подтверждение" id="repass"><br><br>
+            
+            <div id="err"></div>
+                <div class="submit">
+            <input type="submit" name="submit" value="     Войти     ">
+                </div>
+                
+        </div>
+</form>
+    </div>
+</div>
+
+        
+    <script src="/js/tracks.js"></script>
+
 </body>
 </html>
