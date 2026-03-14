@@ -145,3 +145,33 @@ toggleButton.addEventListener('click', () => {
 
 ////////////////////////
 
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.startstop');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const currentImg = this.querySelector('img');
+            const songTitle = this.closest('.circul').querySelector('.txt').textContent;
+            const isActive = currentImg.src.includes('pause-button');
+            
+            // Сбрасываем все кнопки, если нажата неактивная
+            if (!isActive) {
+                document.querySelectorAll('.startstop').forEach(btn => {
+                    const img = btn.querySelector('img');
+                    img.src = '/img/Polygon 3 (1).png';
+                });
+            }
+            
+            // Переключаем текущую кнопку
+            if (isActive) {
+                // Выключаем
+                console.log('Стоп:', songTitle);
+                currentImg.src = '/img/Polygon 3 (1).png';
+            } else {
+                // Включаем
+                console.log('Плей:', songTitle);
+                currentImg.src = '/img/pause-button.png';
+            }
+        });
+    });
+});

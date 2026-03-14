@@ -347,13 +347,21 @@ input[type="repassword"]{text-align: center; font-size: 15px;
 
 @keyframes click{
     0%{
-        scale: 1.05;
+        scale: 1;
     }
     50%{
-        scale: 0.95;
+        scale: 0.9;
     }
     100%{
         scale: 1.05;
+    }
+}
+@keyframes opac{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
 
@@ -391,15 +399,21 @@ input[type="repassword"]{text-align: center; font-size: 15px;
 }
 
 .startstop:hover{
-    scale: 1.05;
+    border-color: transparent; /* Убираем обводку при ховере */
+    box-shadow: 
+        0 0 10px #ffffff8e,
+        0 0 20px #919090bd,
+        0 0 30px #636363;
 }
-.startstop:active{
-    animation: click 0.3s ease;
+.startstop:focus{
+    animation: click 0.2s ease;
+}
+.startstop:active img{
+    animation: opac 0.25s ease;
 }
 
 .startstop img{
-    padding: 20px;
-    padding-left: 26px;
+    padding: 19 px;
 }
 
 h1{
@@ -409,7 +423,7 @@ h1{
     width: auto; height: 75px; padding-top: 18px; 
     text-align: center; color: #e6e3e39d; font-size: 31px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    letter-spacing: 3px; user-select: none; transition: all 0.4s ease;
+    letter-spacing: 3px; user-select: none; transition: all 0.5s ease;
 }
 h1:hover {
     background: linear-gradient(50deg, #00ffff, rgba(196, 32, 32, 0.911), #00ffff);
@@ -424,4 +438,36 @@ h1:hover {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* ///////////// */
+
+#song-container{
+    margin: 35px; width: 1000px;
+    justify-self: center;
+}
+
+.song{
+    display: flex; margin: 10px 0px;
+}
+.namet{
+    white-space: nowrap; width: 750px;
+    overflow: hidden;       
+    text-overflow: ellipsis;
+    font-size: 30px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.788); margin: 0px 15px;
+}
+.autor{
+    font-size: 24px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #8C8C8C; margin: 0px 15px;
+}
+.song div {
+    padding: 21.5px 0; /* 20px сверху и снизу */
+}
+.song img{
+    width: 80px; height: 80px; transition: all 0.25s ease;
+    border-radius: 15px; margin: 15px; margin-right: 5px;
+}
+.song img:hover{
+    scale: 1.066;
 }
